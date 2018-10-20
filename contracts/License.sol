@@ -202,6 +202,7 @@ contract LicenseManager is Ownable {
         uint256 licenseId
     )
         external 
+        view
         licenseExists(customerId, licenseId) 
         returns(Status status) 
     {
@@ -216,6 +217,7 @@ contract LicenseManager is Ownable {
         uint256 licenseId
     )
         external 
+        view
         licenseExists(customerId, licenseId) 
         returns (
             Type licenseType,
@@ -245,7 +247,8 @@ contract LicenseManager is Ownable {
         string customerId, 
         uint256 licenseId
     )
-        external 
+        external
+        view 
         returns (bool exists)
     {
         bytes32 hashedCustomerId = keccak256(abi.encodePacked(customerId));
