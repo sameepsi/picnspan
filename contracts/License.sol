@@ -2,6 +2,10 @@ pragma solidity 0.4.24;
 
 import "openzeppelin-solidity/contracts/ownership/Ownable.sol";
 
+
+/** 
+* @author Sameep Singhania
+*/
 contract LicenseManager is Ownable {
 
     enum Type {STANDARD, EXTENDED, EDITORIAL, RIGHTS_MANAGED}
